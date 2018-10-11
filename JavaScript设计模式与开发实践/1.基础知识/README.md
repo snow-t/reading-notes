@@ -58,7 +58,7 @@ class Dog extends Animal{
 function Dog (name){
     Animal.call(this,name)
 }
-Dog.prototype = Object.create(Animal.p  rototype,{
+Dog.prototype = Object.create(Animal.prototype,{
     constructor:{
         value:Dog
     }
@@ -67,8 +67,8 @@ Dog.prototype.speak = function(){
     console.log("wook")
 }
 
-参考 <a href="https://www.jianshu.com/p/7144cd19c5e1"> https://www.jianshu.com/p/7144cd19c5e1 </a>
 ```
+参考 <a href="https://www.jianshu.com/p/7144cd19c5e1"> ES5/ES6原型链与继承 </a>
 
 ### this、call和apply
 this总是指向一个对象，而具体指向哪个对象是基于函数的执行环境动态绑定的，而非函数被声明时的环境。
